@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Avinash Kumar</h1>
+    <p>Aspiring Web Developer</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>Gaming</h2>
+    <p>
+        Gaming is something I really enjoy in my free time. It helps me relax and also improves my focus and decision-making skills.
+    </p>
+
+    <ol id="hobbyList">
+        <li>Improves concentration <button onclick="removeItem(this)">Delete</button></li>
+        <li>Reduces stress <button onclick="removeItem(this)">Delete</button></li>
+        <li>Enhances problem-solving skills <button onclick="removeItem(this)">Delete</button></li>
+    </ol>
+
+    <input type="text" id="newItem" placeholder="Add new benefit">
+    <button onclick="addItem()">Add</button>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am currently learning web development and exploring how websites are built. I like creating simple designs and improving them step by step. I am interested in learning more about front-end development.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>Calculator</h3>
+        <p>A basic calculator made using HTML and CSS.</p>
+        <a href="#">View</a>
+    </div>
+
+    <div class="project">
+        <h3>To-Do List</h3>
+        <p>A simple task manager to keep track of daily work.</p>
+        <a href="#">View</a>
+    </div>
+
+    <div class="project">
+        <h3>Landing Page</h3>
+        <p>A clean landing page layout for practice.</p>
+        <a href="#">View</a>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <form onsubmit="showMessage(event)">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p>Find me on</p>
+    <a href="#">LinkedIn</a>
+    <a href="#">GitHub</a>
+    <p id="dateTime"></p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
